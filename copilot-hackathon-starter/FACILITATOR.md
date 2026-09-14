@@ -4,7 +4,7 @@ Two repositories, one per room. Same app, different starting line.
 
 | Folder | Room | Ships with | Deliberately missing |
 |---|---|---|---|
-| `starter-beginner/` | Beginner | FastAPI app, in-memory store, one test file, README | Dockerfile, error handling, deploy config |
+| `starter-beginner/` | Beginner | FastAPI app, in-memory store, basic tests, README, participant guide | Dockerfile, error handling, deploy config |
 | `starter-advanced/` | Intermediate & advanced | SQLite data layer, full test suite, `copilot-instructions.md`, three prompt files, CI workflow, ruff config | Dockerfile, Bicep, azd template, deploy workflow, telemetry |
 
 ## Publishing them

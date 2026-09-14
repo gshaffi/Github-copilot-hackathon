@@ -6,15 +6,39 @@ find with GitHub Copilot's agent.
 
 ## Run it
 
-```bash
-python -m venv .venv && source .venv/bin/activate    # Windows: .venv\Scripts\activate
+Use Python 3.11, which matches the version used by CI.
+
+Windows PowerShell:
+
+```powershell
+py -3.11 -m venv .venv
+.venv\Scripts\Activate.ps1
 pip install -r requirements.txt
+ruff check .
+pytest -q
+uvicorn app.main:app --reload
+```
+
+macOS or Linux:
+
+```bash
+python3.11 -m venv .venv
+source .venv/bin/activate
+pip install -r requirements.txt
+ruff check .
 pytest -q
 uvicorn app.main:app --reload
 ```
 
 Open http://localhost:8000/docs — you should have a green test run and a
 running app before the first exercise.
+
+If pytest passes but reports that `.pytest_cache` cannot be created, the
+workspace may be in OneDrive or another synchronized folder with restrictive
+file handling. The warning does not invalidate the test result, but cloning to
+a local, non-synchronized development folder avoids it. Deprecation warnings
+on newer Python releases should first be checked by recreating the environment
+with Python 3.11.
 
 ## What is already configured
 

@@ -20,7 +20,7 @@ FastAPI also generates interactive API documentation at `/docs` while the applic
 
 | Track | Intended audience | Starting point | Main learning goals |
 |---|---|---|---|
-| [Beginner](copilot-hackathon-starter/starter-beginner/) | Participants new to GitHub Copilot or agent-assisted development | Small FastAPI app with an in-memory task store and basic tests | Understand a repository, add error handling, write tests, refactor code, and create a Dockerfile |
+| [Beginner](copilot-hackathon-starter/starter-beginner/) | Participants new to GitHub Copilot or agent-assisted development | Small FastAPI app with an in-memory task store, basic tests, and a participant guide | Understand a repository, add error handling, write tests, refactor code, and create a Dockerfile |
 | [Intermediate and advanced](copilot-hackathon-starter/starter-advanced/) | Participants comfortable with Python, APIs, testing, and CI | FastAPI app with SQLite, repository functions, a larger test suite, CI, and reusable Copilot prompts | Improve repository instructions, extend the API, refactor architecture, optimize SQL, review changes, and generate Azure deployment assets |
 
 ### Beginner track
@@ -31,10 +31,14 @@ The beginner track keeps the codebase deliberately small:
 - `app/store.py` stores tasks in memory.
 - `tests/test_health.py` provides a working test baseline.
 - `requirements.txt` pins the Python dependencies.
+- `workshop.md` provides the step-by-step participant session.
 
 Tasks disappear when the process restarts, and the API has very little error handling. There is no Dockerfile, CI workflow, or deployment configuration. These omissions are intentional workshop exercises rather than accidental production gaps.
 
-See the [beginner track README](copilot-hackathon-starter/starter-beginner/README.md) for setup instructions.
+See the [beginner track README](copilot-hackathon-starter/starter-beginner/README.md)
+for setup instructions and the
+[beginner workshop guide](copilot-hackathon-starter/starter-beginner/workshop.md)
+for the participant session.
 
 ### Intermediate and advanced track
 
@@ -62,7 +66,8 @@ See the [advanced track README](copilot-hackathon-starter/starter-advanced/READM
     │   ├── app/
     │   ├── tests/
     │   ├── README.md
-    │   └── requirements.txt
+    │   ├── requirements.txt
+    │   └── workshop.md
     └── starter-advanced/
         ├── .github/
         ├── app/

@@ -5,6 +5,8 @@ description: Review the current diff the way a staff engineer would.
 
 Review the changes currently in my working tree.
 
+Do not edit files or run commands that modify the working tree.
+
 For each issue, give me:
 
 - the file and line,

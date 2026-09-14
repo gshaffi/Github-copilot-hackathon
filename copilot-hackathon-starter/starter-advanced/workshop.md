@@ -33,12 +33,13 @@ For every exercise:
 ## 1. Set up the repository
 
 From the `starter-advanced` directory, create an environment and establish a
-green baseline.
+green baseline. Use Python 3.11, which is the version exercised by CI. Check
+with `python --version` or `py -3.11 --version` before creating the environment.
 
 ### Windows PowerShell
 
 ```powershell
-python -m venv .venv
+py -3.11 -m venv .venv
 .venv\Scripts\Activate.ps1
 pip install -r requirements.txt
 ruff check .
@@ -49,7 +50,7 @@ uvicorn app.main:app --reload
 ### macOS or Linux
 
 ```bash
-python -m venv .venv
+python3.11 -m venv .venv
 source .venv/bin/activate
 pip install -r requirements.txt
 ruff check .
@@ -59,6 +60,18 @@ uvicorn app.main:app --reload
 
 Open `http://localhost:8000/docs` and confirm that the FastAPI documentation
 loads.
+
+### Setup troubleshooting
+
+- A `PytestCacheWarning` about access to `.pytest_cache` can occur when the
+  repository is inside OneDrive or another synchronized folder. If the tests
+  pass, the warning does not change the result. Use a local, non-synchronized
+  development folder to restore pytest caching.
+- If dependencies emit deprecation warnings on a newer Python release, first
+  recreate `.venv` with Python 3.11 before treating the warning as an
+  application defect.
+- Run Uvicorn from `starter-advanced`; otherwise Python cannot import
+  `app.main`.
 
 ### Ask Copilot to explain the repo
 
