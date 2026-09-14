@@ -59,22 +59,32 @@ See the [advanced track README](copilot-hackathon-starter/starter-advanced/READM
 ## Repository layout
 
 ```text
+├── .gitattributes
+├── .gitignore
+├── GitHub Copilot Hackathon - Beginner Room.pptx
+├── GitHub Copilot Hackathon - Intermediate and Advanced Room.pptx
 ├── README.md
 └── copilot-hackathon-starter/
     ├── FACILITATOR.md
     ├── starter-beginner/
+    │   ├── .env.example
+    │   ├── .gitignore
     │   ├── app/
     │   ├── tests/
     │   ├── README.md
     │   ├── requirements.txt
     │   └── workshop.md
     └── starter-advanced/
+        ├── .env.example
         ├── .github/
+        ├── .gitignore
         ├── app/
+        ├── examples/
         ├── tests/
         ├── README.md
         ├── requirements.txt
-        └── ruff.toml
+        ├── ruff.toml
+        └── workshop.md
 ```
 
 ## How the repository is intended to be used
